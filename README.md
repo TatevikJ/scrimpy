@@ -1,1 +1,1 @@
-SCRIMPy: Single Cell Replication Inference from Multiome data using Python
+# SCRIMPy: Single Cell Replication Inference from Multiome data using Python
