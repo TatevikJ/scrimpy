@@ -85,7 +85,9 @@ outdir/
 ├── reports/                 # Pipeline execution reports
 ├── sample1/                 # Sample 1 analysis results
 │   └── metrics_per_cell.csv # Per-cell metrics for sample 1
+│   └── ...                  
 └── sample2/                 # Sample 2 analysis results
-    └── metrics_per_cell.csv # Per-cell metrics for sample 2
+    └── metrics_per_cell.csv # Per-cell metrics for sample 1
+    └── ...                  
 ```
 
