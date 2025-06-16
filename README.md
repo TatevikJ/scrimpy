@@ -5,8 +5,6 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
-- [Pipeline Overview](#pipeline-overview)
 - [Quick Start](#quick-start)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -38,7 +36,6 @@
 
 ### Installation
 
-1. Clone the repository:
 ```bash
 git clone https://github.com/TatevikJ/scrimpy.git
 cd scrimpy
