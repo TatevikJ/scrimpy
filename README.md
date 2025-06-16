@@ -33,6 +33,8 @@
 
 - [Nextflow](https://www.nextflow.io/docs/latest/getstarted.html#installation) (>=23.04.2)
 - Java 11 or later
+- Python (>= 3.11.3)
+- BEDTools (>= 2.31.0)
 
 ### Installation
 
