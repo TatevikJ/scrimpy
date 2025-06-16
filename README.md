@@ -1,6 +1,6 @@
 # SCRIMPy: Single Cell Replication Inference from Multiome data using Python
 
-[![Nextflow](https://img.shields.io/badge/nextflow%20DSL2-%E2%89%A523.04.0-23aa62.svg)](https://www.nextflow.io/)
+[![Nextflow](https://img.shields.io/badge/Nextflow-DSL2%20%E2%89%A524.04.2-23aa62.svg)](https://www.nextflow.io/)
 
 ## Table of Contents
 
