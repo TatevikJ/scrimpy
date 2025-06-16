@@ -10,11 +10,10 @@
   - [Installation](#installation)
   - [Basic Usage](#basic-usage)
 - [Input Requirements](#input-requirements)
-  - [Sample Sheet Format](#sample-sheet-format)
   - [Required Parameters](#required-parameters)
   - [Optional Parameters](#optional-parameters)
+  - [Sample Sheet Format](#sample-sheet-format)
 - [Output Structure](#output-structure)
-  - [Key Output Files](#key-output-files)
 
 
 ## Overview
@@ -51,6 +50,8 @@ nextflow run main.nf -c nextflow.config
 
 ## Input Requirements
 
+Before running the pipeline, prepare the .config file with the correct input parameters.
+
 ### Required Parameters
 
 | Parameter | Description |
@@ -62,9 +63,9 @@ nextflow run main.nf -c nextflow.config
 
 | Parameter           | Description                                                                 | Default |
 |---------------------|-----------------------------------------------------------------------------|---------|
-| `rt_tsv`            | Path to replication timing data                                             | `None` (required if `rt_chrom_sizes` and `rt_fragments` are not provided)|
-| `rt_chrom_sizes`    | Path to `chrom.sizes` file for generating genomic bins for RT inference    | `None` (required if `rt_tsv` is not provided) |
-| `rt_fragments`      | Path to a fragment file (`atac_fragments.tsv.gz`) used for RT inference     | `None` (required if `rt_tsv` is not provided) |
+| `rt_tsv`            | Path to replication timing data (`false` if using RT inference)             | `None` (required if `rt_chrom_sizes` and `rt_fragments` are not provided)|
+| `rt_chrom_sizes`    | Path to `chrom.sizes` file for generating genomic bins for RT inference     | `None` (required if `rt_tsv` is `false`) |
+| `rt_fragments`      | Path to a fragment file (`atac_fragments.tsv.gz`) used for RT inference     | `None` (required if `rt_tsv` is `false`) |
 | `mem_per_cpu`       | Memory allocated per CPU                                                    | `40.GB` |
 | `cpus`              | Number of CPUs to use per task                                              | `6` |
 
