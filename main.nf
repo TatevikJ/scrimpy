@@ -267,21 +267,6 @@ process GET_OVERLAPPING_FRAGMENTS {
           
     script:
     """    
-    #set -euo pipefail
-    #### Get overlapping fragments - exclude nothing
-    #bedtools intersect \\
-    #    -a ${filtered_fragments} \\
-    #    -b ${filtered_fragments} \\
-    #    -wo -sorted | \\
-    #awk '\$1 == \$6 && \$4 == \$9 && (\$2 < \$7 || (\$2 == \$7 && \$3 < \$8))' - \\
-    #    > atac_overlapping_fragment_pairs.bed
-    #
-    #awk '{print \$1, \$2, \$3, \$4, \$5; print \$6, \$7, \$8, \$9, \$10}' OFS="\\t" atac_overlapping_fragment_pairs.bed | \\
-    #sort -k1,1 -k2,2n -k3,3n -u \\
-    #    > atac_overlapping_fragments.bed
-
-
-
     set -euo pipefail
     mkdir -p "sort_tmp"
     trap "rm -rf sort_tmp" EXIT
@@ -298,7 +283,7 @@ process GET_OVERLAPPING_FRAGMENTS {
     """
 }
 
-// Process 7: Process overlapping fragments and generate metrics
+// Process 6: Process overlapping fragments and generate metrics
 process PROCESS_OVERLAPPING_FRAGMENTS {
     tag "${sample}"
     publishDir "${params.outdir}/${sample}", mode: 'copy'
