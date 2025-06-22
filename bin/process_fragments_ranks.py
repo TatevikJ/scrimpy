@@ -62,7 +62,6 @@ def process_input_file(ranks_bed_path, filtered_cell_barcodes_path, ranks_filter
     rank_counts_per_cell.reset_index().to_csv(counts_out_path, 
                                               sep="\t",
                                               index=False) 
-                                                       index=False)
 
 if __name__ == "__main__":
     # Read input arguments from command-line
