@@ -11,8 +11,8 @@
   - [Basic Usage](#basic-usage)
 - [Input Requirements](#input-requirements)
   - [Required Parameters](#required-parameters)
+      - [Sample Sheet Format](#sample-sheet-format)
   - [Optional Parameters](#optional-parameters)
-  - [Sample Sheet Format](#sample-sheet-format)
 - [Output Structure](#output-structure)
 
 
@@ -59,6 +59,16 @@ Before running the pipeline, prepare the .config file with the correct input par
 | `input_paths_csv` | Path to sample sheet (CSV format) |
 | `outdir` | Output directory |
 
+#### Sample Sheet Format
+
+The pipeline requires a CSV sample sheet with the following columns:
+
+```csv
+sample,fragments,barcodes
+sample1,/path/to/sample1/atac_fragments.tsv.gz,/path/to/sample1/barcode_list.tsv
+sample2,/path/to/sample2/atac_fragments.tsv.gz,/path/to/sample2/barcode_list.tsv
+```
+
 ### Optional Parameters
 
 | Parameter           | Description                                                                 | Default |
@@ -69,15 +79,6 @@ Before running the pipeline, prepare the .config file with the correct input par
 | `mem_per_cpu`       | Memory allocated per CPU                                                    | `40.GB` |
 | `cpus`              | Number of CPUs to use per task                                              | `6` |
 
-### Sample Sheet Format
-
-The pipeline requires a CSV sample sheet with the following columns:
-
-```csv
-sample,fragments,barcodes
-sample1,/path/to/sample1/atac_fragments.tsv.gz,/path/to/sample1/barcode_list.tsv
-sample2,/path/to/sample2/atac_fragments.tsv.gz,/path/to/sample2/barcode_list.tsv
-```
 
 ## Output Structure
 
